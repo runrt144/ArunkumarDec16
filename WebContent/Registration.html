@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Registration</title>
+       <link rel="icon" href="images/favicon.ico">
+       <link rel="stylesheet" type="text/css" href="forehead.css" />
+       <style type="text/css">
+         body 
+         {
+         background: url("images/Register.jpeg") no-repeat top center; 
+         background-size: left;
+         }
+         .form{ 
+         color: darkblue;
+         padding:20px;  
+         border:1px solid black;  
+         border-radius:20px;  
+         font-weight:bold; 
+         font-size: 100%;
+         font-variant: small-caps;
+         font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+         width: 60%;
+         width: 250px;
+         position: relative;	
+         top: 50%;
+         left: 50%;
+         margin-top: 200px;
+         margin-left: -150px;
+         }  
+      </style>
+
+   </head>
+   <body>
+      <div style="hight:30%"; align="center" class="form" >
+         <h3 class="formheading">Register Here</h3>
+         <form id="regform" action="RegisterServlet" method="post">
+            <table>
+               <tr>
+                  <td>First Name:</td>
+                  <td><input type="text" name="firstName" required placeholder="Firstname"/></td>
+               </tr>
+               <tr>
+                  <td>Last Name:</td>
+                  <td><input type="text" name="lastName" required placeholder="Lastname"/></td>
+               </tr>
+               <tr>
+                  <td>Email:</td>
+                  <td><input type="email" name="email"  required placeholder="Your Email"/></td>
+               </tr>
+               <tr>
+                  <td>Password:</td>
+                  <td><input  type="password" name="password" id="password" required placeholder="Password"
+                             minlength=5 maxlength=12 /></td>
+               </tr>
+               <tr>
+                  <td>Confirm Password:</td>
+                  <td><input type="password" name="confirm_password"  id="confirm_password" required placeholder="Enter the same password" maxlength=12 minlength=5/></td>
+               </tr>
+               <tr>
+                  <td class="tdLabel"><label for="register_gender" class="label">Gender:</label></td>
+                  <td>  
+                     <input type="radio" name="gender" required id="register_gendermale" value="male"/>  
+                     <label for="register_gendermale">Male</label>  
+                     <input type="radio" name="gender" id="register_genderfemale" value="female"/>  
+                     <label for="register_genderfemale">Female</label>  
+                  </td>
+               </tr>
+                
+               <tr>
+                  <td>Zip:</td>
+                  <td><input type="zip" name="zip"  required placeholder="Zip"/></td>
+               </tr>
+                
+                <tr>
+                  <td>Phone Number:</td>
+                  <td><input type="text" name="phone_no" placeholder="Phone Number"/></td>
+               </tr>
+               <tr>
+                  <td colspan="4" style="text-align: center;" >
+                     <br><input class="sub" type="submit" value="Register" />
+                  </td>
+               </tr>
+            </table>
+         </form>
+      </div>
+   </body>
+</html>

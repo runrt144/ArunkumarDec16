@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Flight Booking</title>
+<style type="text/css">
+    body {
+        --background: url("images/flightsearch.jpg") no-repeat top fixed; 
+        --background-size: top;
+    }
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-style: oblique;
+        
+}
+.divi {
+	
+    --background: url("images/flightsearch.jpg") no-repeat center fixed; 
+    border-radius:5px;
+	--background-color: whitesmoke;
+	padding: 20px;
+    position: fixed;
+    
+    --position: absolute;
+    width: 300px;
+    height: 300px;
+    /* Center form on page horizontally & vertically */
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+}
+.search{  
+    background-color:blue;  
+    padding: 7px 40px 7px 40px;  
+    color:white;  
+    font-weight:bold;  
+    margin-left:30px;  
+    border-radius:5px;  
+}
+
+.searchform {
+    padding:20px;  
+    border:1px solid black;  
+    border-radius:20px;  
+    --width:100%;
+    --margin-left:50%; 
+    --margin-top: 50%;
+    --margin-bottom: 50%
+    --margin-right:50%;
+    position: fixed;
+    
+    --position: absolute;
+    width: 300px;
+    height: 300px;
+    /* Center form on page horizontally & vertically */
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+}  
+ 
+</style>
+<script>
+  $(function() {
+    $( ".datepicker" ).datepicker({ dateFormat: "yyyy-mm-dd" });
+  });
+</script>
+    
+
+</head>
+<body> 
+     <div style="hight:30%"; align="left" class="searchform" >
+<table>
+<tr>
+    <td><input type="radio" name="radio" value="round trip"/>ROUND TRIP</td>
+    <td><input type="radio" name="radio" value="one way">ONE WAY</td>
+</tr>
+
+<tr>
+<td><p>FROM</p>
+    <select name="state">
+    <option value="">Leaving from...</option>
+        <option value="AL">Alabama(AL)</option>
+        <option value="AK"> Alaska (AK)</option>
+        <option value="AZ"> Arizona(AZ)</option>
+        <option value="AR">Arkansas(AR)</option>
+        <option value="CA"> California(CA)</option>
+        <option value="CO">Colorado(CO)</option>
+        <option value="CT"> Connecticut (CT)</option>
+        <option value="DL">Delaware (DL)</option>
+        <option value="DC"> District of Columbia (DC)</option>
+        <option value="FL"> Florida (FL)</option>
+        <option value="GA">Georgia (GA)</option>
+        <option value="HI">Hawaii(HI)</option>
+        <option value="ID">Idaho (ID)</option>
+        <option value="IL"> Illinois(IL)</option>
+        <option value="IN"> Indiana (IN)</option>
+        <option value="IA">Iowa (IA)</option>
+        <option value="KS">Kansas(KS)</option>
+        <option value="KY">Kentucky(KY)</option>
+        <option value="LA"> Louisiana (LA)</option>
+        <option value="ME">Maine (ME)</option>
+        <option value="MD">Maryland(MD)</option>
+        <option value="MA"> Massachusetts(MA)</option>
+        <option value="MI">Michigan(MI)</option>
+        <option value="MN"> Minnesota(MN)</option>
+        <option value="MS">Mississippi	(MS)</option>
+        <option value="MO">Missouri (MO)</option>
+        <option value="MT">Montana(MT)</option>
+        <option value="NE">Nebraska(NE)</option>
+        <option value="NV">Nevada(NV)</option>
+        <option value="NH"> New Hampshire(NH)</option>
+        <option value="NJ">New Jersey(NJ)</option>
+        <option value="NM"> New Mexico(NM)</option>
+        <option value="NY">New York(NY)</option>
+        <option value="NC">North Carolina(NC)</option>
+        <option value="ND">  North Dakota(ND)</option>
+        <option value="OH"> Ohio(OH)</option>
+        <option value="OK">Oklahoma(OK)</option>
+        <option value="OR">Oregon(OR)</option>
+        <option value="PA">Pennsylvania(PA)</option>
+        <option value="RI"> Rhode Island(RI)</option>
+        <option value="SD">  South Dakota(SD)</option>
+        <option value="TN">  Tennessee(TN)</option>
+        <option value="TX"> Texas(TX)</option>
+        <option value="UT"> Utah(UT)</option>
+        <option value="VT">  Vermont(VT)</option>
+        <option value="VA">Virginia(VA)</option>
+        <option value=" WA">Washington(WA)</option>
+        <option value="WV">  West Virginia(WV)</option>
+        <option value="WI"> Wisconsin(WI)</option>
+        <option value="WY"> Wyoming(WY)</option>
+        <option value="AS"> American Samoa(AS)</option>
+        <option value="GU"> Guam(GU)</option>
+        <option value="MP">  Northern Mariana Islands(MP)</option>
+        <option value="PR"> Puerto Rico(PR)</option>
+        <option value="VI"> U.S. Virgin Islands	(VI)</option>
+        <option value="WI"> U.S. Minor Outlying Islands(WI)</option>
+	</select>
+	</td>
+<td>TO
+<select name="state">
+<option value="">Going to...</option>
+	<option value="AL">Alabama(AL)</option>
+	<option value="AK"> Alaska (AK)</option>
+	<option value="AZ"> Arizona(AZ)</option>
+	<option value="AR">Arkansas(AR)</option>
+	<option value="CA"> California(CA)</option>
+	<option value="CO">Colorado(CO)</option>
+	<option value="CT"> Connecticut (CT)</option>
+	<option value="DL">Delaware (DL)</option>
+	<option value="DC"> District of Columbia (DC)</option>
+	<option value="FL"> Florida (FL)</option>
+	<option value="GA">Georgia (GA)</option>
+	<option value="HI">Hawaii(HI)</option>
+	<option value="ID">Idaho (ID)</option>
+	<option value="IL"> Illinois(IL)</option>
+	<option value="IN"> Indiana (IN)</option>
+	<option value="IA">Iowa (IA)</option>
+	<option value="KS">Kansas(KS)</option>
+	<option value="KY">Kentucky(KY)</option>
+	<option value="LA"> Louisiana (LA)</option>
+	<option value="ME">Maine (ME)</option>
+	<option value="MD">Maryland(MD)</option>
+	<option value="MA"> Massachusetts(MA)</option>
+	<option value="MI">Michigan(MI)</option>
+	<option value="MN"> Minnesota(MN)</option>
+	<option value="MS">Mississippi	(MS)</option>
+	<option value="MO">Missouri (MO)</option>
+	<option value="MT">Montana(MT)</option>
+	<option value="NE">Nebraska(NE)</option>
+	<option value="NV">Nevada(NV)</option>
+	<option value="NH"> New Hampshire(NH)</option>
+	<option value="NJ">New Jersey(NJ)</option>
+	<option value="NM"> New Mexico(NM)</option>
+	<option value="NY">New York(NY)</option>
+	<option value="NC">North Carolina(NC)</option>
+	<option value="ND">  North Dakota(ND)</option>
+	<option value="OH"> Ohio(OH)</option>
+	<option value="OK">Oklahoma(OK)</option>
+	<option value="OR">Oregon(OR)</option>
+	<option value="PA">Pennsylvania(PA)</option>
+	<option value="RI"> Rhode Island(RI)</option>
+	<option value="SD">  South Dakota(SD)</option>
+	<option value="TN">  Tennessee(TN)</option>
+	<option value="TX"> Texas(TX)</option>
+	<option value="UT"> Utah(UT)</option>
+	<option value="VT">  Vermont(VT)</option>
+	<option value="VA">Virginia(VA)</option>
+	<option value=" WA">Washington(WA)</option>
+	<option value="WV">  West Virginia(WV)</option>
+	<option value="WI"> Wisconsin(WI)</option>
+	<option value="WY"> Wyoming(WY)</option>
+	<option value="AS"> American Samoa(AS)</option>
+	<option value="GU"> Guam(GU)</option>
+	<option value="MP">  Northern Mariana Islands(MP)</option>
+	<option value="PR"> Puerto Rico(PR)</option>
+	<option value="VI"> U.S. Virgin Islands	(VI)</option>
+	<option value="WI"> U.S. Minor Outlying Islands(WI)</option>
+	</select>
+	</td>
+	</tr>
+	
+   <tr>
+   <td><input id="datepicker1"  type="date" name="date" placeholder="select date"/></td>
+   <td><input id="datepicker2"  type="date" name="date" placeholder="select date"/></td> 
+   </tr>
+  
+ <tr>
+   <td><select name="adults" >
+   <option value="1">1 Adult</option>
+	<option value="2">2 Adults</option>
+	<option value="3">3 Adults</option>
+	<option value="4">4 Adults</option>
+	<option value="5">5 Adults</option>
+	<option value="6">6 Adults</option>
+	<option value="7">7 Adults</option>
+	<option value="8">8 Adults</option>
+	<option value="9">9 Adults</option>
+   </select>
+   </td>
+   <td>
+   <select name="childrens">
+   <option value="0">0 Children</option>
+	<option value="1">1 Child</option>
+	<option value="2">2 Children</option>
+	<option value="3">3 Children</option>
+	<option value="4">4 Children</option>
+   </select>
+   </td>
+   </tr>
+    <tr>
+    <td colspan="4" style="text-align: center;" >
+    <input class="search" type="submit" value="Search"/>
+    </td>
+    </tr>
+    
+   </table>
+</div> 
+  </body>
+</html>

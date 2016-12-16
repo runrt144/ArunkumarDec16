@@ -1,0 +1,30 @@
+<link rel="icon" href="images/favicon.ico">
+
+xx{
+    
+}
+
+.formheading{  
+    background-color:dodgerblue;  
+    color:white;  
+    padding:4px;  
+    text-align:center; 
+    font-weight:bold; 
+    font-size: 130%;
+    font-variant: small-caps;
+}  
+  
+.sub{  
+    background-color:blue;  
+    padding: 7px 40px 7px 40px;  
+    color:white;  
+    font-weight:bold;  
+    margin-left:30px;  
+    border-radius:5px; 
+    font-weight:bold; 
+    font-size: 100%;
+    font-variant: small-caps;
+}
+input:HOVER {
+border-color: blue;	
+}
